@@ -1,31 +1,13 @@
-# Copilot Instructions
+## Security
 
-## Project Context
-- Backend: Python (FastAPI) under src/backend.
-- Frontend: Static assets under src/static.
-- Entry point: src/app.py.
+- Validate input sanitization practices.
+- Search for risks that might expose user data.
+- Prefer loading configuration and content from the database instead of hard coded content. If absolutely necessary, load it from environment variables or a non-committed config file.
 
-## Coding Guidelines
-- Keep changes focused and minimal for the requested task.
-- Preserve existing naming and file organization.
-- Do not add dependencies unless they are necessary.
-- Prefer clear, readable code over clever abstractions.
+## Code Quality
 
-## Backend (Python)
-- Follow existing API patterns in src/backend/routers.
-- Keep request and response handling explicit.
-- Avoid broad exception catching; surface meaningful errors.
-- Keep database-related logic consistent with src/backend/database.py.
-
-## Frontend (HTML/CSS/JS)
-- Maintain current UI structure and class naming.
-- Prefer small, targeted DOM and style updates.
-- Keep accessibility in mind (labels, button text, ARIA when needed).
-
-## Testing and Validation
-- Run relevant checks after edits when possible.
-- If tests are not available, validate by reasoning through affected paths and report what was verified.
-
-## Pull Request Expectations
-- Summarize what changed and why.
-- Call out risks, follow-ups, and any manual verification steps.
+- Use consistent naming conventions.
+- Try to reduce code duplication.
+- Prefer maintainability and readability over optimization.
+- If a method is used a lot, try to optimize it for performance.
+- Prefer explicit error handling over silent failures.
